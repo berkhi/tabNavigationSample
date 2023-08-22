@@ -1,12 +1,17 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text } from 'react-native';
 
-const DetailsScreen = ({ navigation }) => {
+const DetailsScreen = ({ route }) => {
+
+  const { item } = route.params;
+
   return (
     <View>
-      <Text>Details Screen</Text>
+      <Text>Name: {item.name}</Text>
+      <Text>Price: {item.unitPrice}</Text>
+      <Text>Stock: {item.unitsInStock}</Text>
     </View>
-  );
+  )
 };
 
 export default DetailsScreen;
